@@ -68,6 +68,7 @@ fdutils
 fetchmail
 file
 finger
+fio
 fsarchiver
 {%- if ARCH == "amd64" %}
 fuseext2
@@ -165,6 +166,7 @@ parted
 patch
 pciutils
 pcmciautils
+php-cli
 picocom
 powermgmt-base
 pppconfig
