@@ -44,8 +44,8 @@ need more working disk space, run:
 # DOCUMENTATION
 
 More Finnix documentation is available at [the finnix-docs repository on
-GitHub](https://github.com/finnix/finnix-docs).
-{% endif %}
+GitHub](https://github.com/finnix/finnix-docs).{% endif %}
+
 # LICENSE
 
 This document is provided under the following license:
