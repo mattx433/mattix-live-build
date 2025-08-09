@@ -44,7 +44,7 @@ jobs:
       - name: "Attest"
         uses: "actions/attest-build-provenance@v1"
         with:
-          subject-path: "${{ github.workspace }}/build/lb/finnix-*.iso"
+          subject-path: "${{ github.workspace }}/build/lb/mattix-*.iso"
       - name: "Upload artifacts"
         uses: "actions/upload-artifact@v4"
         with:
