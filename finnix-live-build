@@ -6,10 +6,10 @@
 
 set -e
 
-PRODUCT="${PRODUCT:-Finnix}"
-PRODUCT_ID="${PRODUCT_ID:-finnix}"
+PRODUCT="${PRODUCT:-Mattix}"
+PRODUCT_ID="${PRODUCT_ID:-mattix}"
 VERSION="${VERSION:-dev}"
-CODENAME="${CODENAME:-Rhinelander}"
+CODENAME="${CODENAME:-Something}"
 ARCH="${ARCH:-$(dpkg --print-architecture)}"
 SOURCE_ISO="${SOURCE_ISO:-false}"
 CACHE_FROZEN="${CACHE_FROZEN:-false}"
