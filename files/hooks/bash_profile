@@ -21,3 +21,20 @@ alias la='ls -A'
 alias ll='ls -alF'
 
 alias httpd='python3 -m http.server'
+
+if [ "$(tty)" = "/dev/tty1" ] && [ ! -d /scripts ]; then
+  echo "-- About to load rescue.tar.gz. Press CTRL+C now to interrupt. --"
+  __delay=3
+  while [ ${__delay} -gt 0 ]; do
+    echo -n "${__delay}..."
+    sleep 1
+    __delay=$((${__delay}-1))
+  done
+  unset __delay
+  echo "Loading now!"
+  wget https://pulsedmedia.com/remote/rescue.tar.gz -O /tmp/rescue.tar.gz
+  mkdir /scripts
+  tar -C /scripts -xf /tmp/rescue.tar.gz
+  rm /tmp/rescue.tar.gz
+  echo "Done!"
+fi
