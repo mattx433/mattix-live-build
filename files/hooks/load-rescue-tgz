@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# SPDX-PackageSummary: mattix-live-build
+# SPDX-FileComment: Mattix rescue.tar.gz loader
+# SPDX-FileCopyrightText: Copyright (C) 2025 mattx.cloud
+# SPDX-License-Identifier: MPL-2.0
+
+wget https://pulsedmedia.com/remote/rescue.tar.gz -O /tmp/rescue.tar.gz
+mkdir -p /scripts
+tar -C / -xf /tmp/rescue.tar.gz
+rm /tmp/rescue.tar.gz
+bash /scripts/autorun.sh
