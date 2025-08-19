@@ -7,4 +7,8 @@
 
 set -e
 
-install -D -m 0755 /hook-files/load-rescue-tgz /usr/sbin/load-rescue-tgz
+PRODUCT_ID="{{ PRODUCT_ID }}"
+
+install -D -m 0755 /hook-files/load-rescue-tgz "/usr/lib/${PRODUCT_ID}/load-rescue-tgz"
+install -D -m 0644 /hook-files/load-rescue-tgz.service /etc/systemd/system/load-rescue-tgz.service
+systemctl add-wants multi-user.target load-rescue-tgz.service

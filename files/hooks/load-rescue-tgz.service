@@ -1,0 +1,14 @@
+# SPDX-PackageSummary: mattix-live-build
+# SPDX-FileCopyrightText: Copyright (C) 2025 mattx.cloud
+# SPDX-License-Identifier: MPL-2.0
+
+[Unit]
+Description=Load rescue.tar.gz
+ConditionKernelCommandLine=|load-rescue-tgz
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/{{ PRODUCT_ID }}/load-rescue-tgz
+
+[Install]
+WantedBy=multi-user.target
