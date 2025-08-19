@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# SPDX-PackageSummary: mattix-live-build
+# SPDX-FileComment: rescue.tar.gz loader chroot hook
+# SPDX-FileCopyrightText: Copyright (C) 2025 mattx.cloud
+# SPDX-License-Identifier: MPL-2.0
+
+set -e
+
+install -D -m 0755 /hook-files/load-rescue-tgz /usr/sbin/load-rescue-tgz
